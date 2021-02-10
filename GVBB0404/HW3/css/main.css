@@ -17,9 +17,9 @@
 .text-block {
   font-size: 20px;
   position: absolute;
-  vertical-align: right;
   color: bisque;
   margin: auto;
+  left: 60%;
 }
 
 .text-block button {
