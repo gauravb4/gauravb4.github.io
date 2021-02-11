@@ -32,21 +32,22 @@ body {
 .parallax {
   background-image: url("../Assets/Restaurant.jfif");
   margin-top: 2%;
-  background-attachment: fixed;
-  background-position-x: -400px;
-  background-position-y: -20px;
-  background-repeat:no-repeat;
-  background-size: cover;
-  height: 515px;
-  width: 915px;
-  max-height: 515px;
-  max-width: 915px;
   position: relative;
   text-align: center;
   vertical-align: middle;
   display: inline-block;
   scroll-behavior: smooth;
-  margin-left: 50px;
+  margin-left: 60px;
+  padding-left: 60px;  
+  height:300px;
+  width:900px;
+  background-attachment: fixed;
+  background-position: top left;
+  background-size: 915px, 515px;
+  background-repeat: no-repeat;
+  font-size: 48px;
+  text-align: center;
+
 }
 
 .center-text {
@@ -58,7 +59,10 @@ body {
   color: bisque;
 }
 
-.center-text button {
+.center-text button:disabled {
+  font-weight: 100;
+  color:black;
+  background: #dddddd;
   position: absolute;
   border: rgb(0, 0, 0);
   border-style: double;
