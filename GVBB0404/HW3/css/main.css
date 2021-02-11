@@ -90,6 +90,7 @@ body {
   height: 360px;
   float: left;
   margin-left: auto;
+  
 }
 
 .leftcolumn img {
@@ -99,6 +100,7 @@ body {
   border: rgb(252, 217, 223);
   border-width: 12px;
   border-style: solid;
+  margin-left: 55px;
 }
 .textmodifier {
   margin-top: 125px;
@@ -107,6 +109,7 @@ body {
 
 .leftcolumn p {
   position: relative;
+  margin-left: 65px;
 }
 
 .rightcolumn {
@@ -121,9 +124,10 @@ body {
   border: rgb(187, 247, 247);
   border-width: 12px;
   border-style: solid;
+  margin-right: 55px;
 }
 
 .rightcolumn p {
   position: relative;
-  top: 50%;
+  margin-right: 35px;
 }
