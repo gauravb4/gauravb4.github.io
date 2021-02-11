@@ -10,7 +10,6 @@
   margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;  
-  position: center;
   font-family: Arial;
 }
   
@@ -18,8 +17,8 @@
   font-size: 20px;
   position: absolute;
   color: bisque;
-  margin: auto;
-  left: 60%;
+  top: 50%;
+  text-align: center;
 }
 
 .text-block button {
@@ -64,11 +63,10 @@ h1 {
 .menu-bar-list {
   list-style-type: none;
   text-align: left;
-  margin-left: 7%;
+  margin-left: 3%;
 }
 
 .menu-bar-list li {
-  margin-left: 1%;
   padding-top: 15px;
   display: inline-block;
   font-size: 20px;
@@ -80,34 +78,36 @@ h1 {
 
 
 .leftcolumn {
-  width: 50%;
-  height: 300px;
+  width: 48%;
+  height: 400px;
   float: left;
 }
 
 .leftcolumn img {
-  width: 80%;
-  height: 80%;
+  width: 95%;
+  height: 95%;
   border: rgb(252, 217, 223);
   border-width: 7px;
   border-style: solid;
 }
 
 .rightcolumn {
-  width: 50%;
-  height: 300px;
+  width: 48%;
+  height: 400px;
   float: right;
 }
 
 .rightcolumn img {
-  width: 80%;
-  height: 80%;
+  width: 95%;
+  height: 95%;
   border: rgb(187, 247, 247);
   border-width: 7px;
   border-style: solid;
 }
 
+
 .content {
-  width: 960px;
+  width: 1760px;
   margin: auto;
+  cursor:crosshair;
 }
