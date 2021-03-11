@@ -1,0 +1,360 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/home.css">
+    </head>
+    <body style="background-color:black;">
+        <div class="header">
+            <h1>
+                THE MOVIE DB
+            </h1>
+        </div>
+        <!--<div class="showmorepage">
+            <div class="imgcont">
+                <img src="../assets/movie-placeholder.jpg">
+            </div>
+        </div>-->
+        <div class="sidebar">
+            <div class="tab">
+                <button class="tablinks"onclick="hometab(event)" id="defaultOpen">Home  &Tab; &Tab; &LongRightArrow;</button>
+                <button class="tablinks" onclick="searchtab(event)">Search  &Tab; &Tab; &LongRightArrow;</button>
+                <!--<button class="tablinks" onclick="ss()">Test  &Tab; &Tab; &LongRightArrow;</button>-->
+            </div>
+        </div>
+        <div class=tabcontent>
+            <div class="homecontent">
+                <div class="display-item">
+                    Trending Movies <br>
+                    <div class="homeimg">
+                        <img class="movieslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="movieslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="movieslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="movieslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="movieslides" src="../assets/movie-placeholder.jpg">
+                    </div>
+                    <div class="img-text" id="moviecaption">
+                        placeholder text
+                    </div>
+                </div>
+                <div class="display-item">
+                    TV Shows On-Air Today <br>
+                    <div class="homeimg">
+                        <img class="tvslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="tvslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="tvslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="tvslides" src="../assets/movie-placeholder.jpg" style="display: none;">
+                        <img class="tvslides" src="../assets/movie-placeholder.jpg">
+                    </div>
+                    <div class="img-text" id="tvcaption">
+                        placeholder text
+                    </div>
+                </div>
+                <div class="footer">
+                    Powered by TMDB.
+                </div>
+            </div>
+            <div class="redbackground">
+                <div class="searchform">
+                    <h1>Search</h1>
+                    <form action="">
+                        <div class=searchstuff>
+                            <label for="kword">Keyword</label><span class="required">*</span>
+                            <input type="text" id="kword" name="keyword" value="" size="40" style="border: none; border-radius: 4px;"><br><br>
+                            <label for="cat">Category</label><span class="required">*</span>
+                            <select name="cat" id="category" style="border: none; border-radius: 4px;">
+                                <option disabled selected value></option>
+                                <option value="M">Movies</option>
+                                <option value="T">TV Shows</option>
+                                <option value="MT">Movies and TV Shows</option>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </form>
+                    <button class="searchbutton" onclick="search()">Submit</button>
+                    <button onclick="clearfields()">Clear</button>
+                </div>
+            </div>
+            <div class="searchcontent">
+                <h2 id="resultlister"></h2>
+                <div class="searchitem" id="searchitem0" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem1" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem2" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem3" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem4" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem5" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem6" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem7" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem8" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+                <div class="searchitem" id="searchitem9" style="display: none;">
+                    <div class="searchimg">
+                        <img src="../assets/movie_placeholder.png">
+                    </div>
+                    <div class="searchtext">
+                        <h1 id="title">
+                            Placeholder Title
+                        </h1>
+                        <span id="yeargenre">
+                           2020 | Adventure, Science
+                        </span>
+                        <br>
+                        <span id="rating">
+                            &#9733; 0/5
+                        </span>
+                        <span id="votes">
+                            0 votes
+                        </span><br>
+                        <span id="summary">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet eros scelerisque convallis dapibus. Praesent consequat ligula et pharetra semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et libero ut felis lacinia aliquam non tincidunt diam. Nullam rutrum venenatis massa, non bibendum dolor. Mauris consectetur sollicitudin risus, sit amet commodo nulla tincidunt at. Cras non tincidunt arcu.
+                        </span><br>
+                        <button class="showmmore" id="showmmore" onclick="showmoredata(event)">Show More</button>
+                        <span id="type" style="display: none;">
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="../js/home.js"></script>
+        <script>
+            document.getElementById("defaultOpen").click();
+            start();
+        </script>
+    </body>
+</html>
