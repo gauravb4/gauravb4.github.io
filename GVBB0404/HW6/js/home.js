@@ -75,7 +75,7 @@ function clearSearch(){
 
 async function search() {
     clearSearch();
-    const urls = 'http://gauravb4hw6.azurewebsites.net/search'
+    const urls = 'http://gbhw6.azurewebsites.net/search'
     var keyw = document.getElementById("kword").value;
     var cat = document.getElementById("category").value;
     let response = [];
@@ -237,7 +237,7 @@ function populateSearch(result)
 
 
 async function trending(){
-    const movieurl = 'http://gauravb4hw6.azurewebsites.net/trendingmovies'  
+    const movieurl = 'http://gbhw6.azurewebsites.net/trendingmovies'  
     // var xhttp = new XMLHttpRequest();
     // xhttp.onreadystatechange = function() {
     //     if(this.readyState == 4 && this.status == 200){
@@ -247,8 +247,8 @@ async function trending(){
     // xhttp.open("GET",movieurl,true);
     // xhttp.send();
     response= await fetch(movieurl)
-    .then(response=>console.log(response))
-    .then(data=>console.log(data))
+    .then(response=>response.json())
+    .then(data=>JSON.parse(data))
     .then(function(data){
         for(i = 0; i < 5; i ++){
             item = {
@@ -259,10 +259,10 @@ async function trending(){
             movies.push(item);
         }
     });
-    const tvurl = 'http://gauravb4hw6.azurewebsites.net/trendingtv'
+    const tvurl = 'http://gbhw6.azurewebsites.net/trendingtv'
     response=await fetch(tvurl, {
         method:'GET',
-        mode: 'no-cors', // no-cors, *cors, same-origin
+        mode: 'cors', // cors, *cors, same-origin
         credentials: 'same-origin', // include, *same-origin, omit
     })
     .then(response=>response.json())
@@ -277,10 +277,10 @@ async function trending(){
             tv.push(item);
         }
     });
-    const genremovieurl = 'http://gauravb4hw6.azurewebsites.net/mgenre'
+    const genremovieurl = 'http://gbhw6.azurewebsites.net/mgenre'
     response=await fetch(genremovieurl, {
         method:'GET',
-        mode: 'no-cors', // no-cors, *cors, same-origin
+        mode: 'cors', // cors, *cors, same-origin
         credentials: 'same-origin', // include, *same-origin, omit
     })
     .then(response=>response.json())
@@ -290,10 +290,10 @@ async function trending(){
             movie_genres[data.genres[i].id] = data.genres[i].name;
         }
     });
-    const genretvurl = 'http://gauravb4hw6.azurewebsites.net/tgenre'
+    const genretvurl = 'http://gbhw6.azurewebsites.net/tgenre'
     response=await fetch(genretvurl, {
         method:'GET',
-        mode: 'no-cors', // no-cors, *cors, same-origin
+        mode: 'cors', // cors, *cors, same-origin
         credentials: 'same-origin', // include, *same-origin, omit
     })
     .then(response=>response.json())
@@ -366,11 +366,11 @@ async function showmoredata(event){
     id = key.substring(0, ind);
     console.log(key.substring(0, ind));
     console.log(key.substring(ind + 1));
-    const getdetails = 'http://gauravb4hw6.azurewebsites.net/' + type + '/' + id;
+    const getdetails = 'http://gbhw6.azurewebsites.net/' + type + '/' + id;
     console.log(getdetails);
-    const getcredits = 'http://gauravb4hw6.azurewebsites.net/' + type + '/credits/' + id;
+    const getcredits = 'http://gbhw6.azurewebsites.net/' + type + '/credits/' + id;
     console.log(getcredits);
-    const getreviews = 'http://gauravb4hw6.azurewebsites.net/' + type + '/review/' + id;
+    const getreviews = 'http://gbhw6.azurewebsites.net/' + type + '/review/' + id;
     console.log(getreviews);
     details=await fetch(getdetails)
     .then(response=>response.json())
