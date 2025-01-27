@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Gaurav Baney - Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,12 +23,18 @@
         }
         h1 {
             color: #fca311;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         h2 {
             color: #f7b801;
+            border-bottom: 2px solid #f7b801;
+            padding-bottom: 5px;
+            margin-top: 25px;
         }
         h3 {
             color: #f18701;
+            margin-bottom: 5px;
         }
         a {
             color: #00b4d8;
@@ -43,19 +49,38 @@
             padding: 20px;
             border-radius: 5px;
         }
-        .project {
+        .job {
             background-color: #16213e;
             padding: 15px;
             margin-bottom: 15px;
             border-radius: 5px;
         }
+        .contact-info {
+            margin: 10px 0;
+        }
+        .date {
+            color: #888;
+            font-style: italic;
+        }
         ul {
             list-style-type: none;
-            padding-left: 0;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 8px;
+            position: relative;
         }
         li::before {
-            content: "• ";
+            content: "•";
             color: #fca311;
+            position: absolute;
+            left: -15px;
+        }
+        .sub-role {
+            color: #888;
+            font-style: italic;
+            margin: 5px 0;
         }
         @media (max-width: 600px) {
             body {
@@ -66,58 +91,114 @@
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Creative Thinker</p>
+        <h1>Gaurav Baney</h1>
+        <div class="contact-info">
+            <a href="tel:2069723445">206-972-3445</a> |
+            <a href="mailto:gvbaney1@gmail.com">gvbaney1@gmail.com</a> |
+            <a href="https://linkedin.com/in/gaurav-baney/">linkedin.com/in/gaurav-baney/</a>
+        </div>
     </header>
 
     <main>
         <section class="section">
-            <h2>About Me</h2>
-            <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating intuitive, user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I enjoy bringing ideas to life in the digital world.</p>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5, CSS3, JavaScript</li>
-                <li>Responsive Web Design</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>Git & GitHub</li>
-                <li>UI/UX Design Principles</li>
-            </ul>
-        </section>
-
-        <section class="section">
             <h2>Experience</h2>
-            <h3>Web Developer - XYZ Company</h3>
-            <p>June 2020 - Present</p>
-            <ul>
-                <li>Developed and maintained multiple client websites</li>
-                <li>Collaborated with design team to implement responsive layouts</li>
-                <li>Optimized website performance and improved load times</li>
-            </ul>
+            <div class="job">
+                <h3>Activision</h3>
+                <p>Los Angeles, CA</p>
+                <p>Supported end to end development of 6 AAA games, multiple internal tools and services.</p>
+                
+                <div class="sub-role">
+                    <h4>Data Engineer 2 | Python, Django, Docker, Kubernetes - Data Experience</h4>
+                    <span class="date">Nov 2023 - Present</span>
+                </div>
+                <ul>
+                    <li>Building enterprise-wide templated SQL automation tools currently used by 40% of the company with built-in monitoring, query visualizations, and quality assurance capabilities to streamline data operations.</li>
+                    <li>Optimized database schema structure fetching process for 3 applications, achieving 93% speed improvement through Spark API internals, and reducing compute costs by 86%.</li>
+                    <li>Executed complex backend integration strategy for core business tools, delivering zero-downtime migrations while preserving customer experience.</li>
+                </ul>
+
+                <div class="sub-role">
+                    <h4>Tools Engineer | C++, Python, Docker, Kubernetes - Anti Cheat Services</h4>
+                    <span class="date">Feb 2023 - Nov 2023</span>
+                </div>
+                <ul>
+                    <li>Built a robust data ingestion pipeline using GKE, Redis and Grafana that processes monthly volume of ~30m files</li>
+                    <li>Spearheaded the maintenance and updates of a Slack enabled command line interface for internal APIs and tools, ensuring a user-friendly experience for non-technical users.</li>
+                    <li>Automated the grant of certain in-game benefits, reducing manual review by 90% and helping catch bad actors.</li>
+                </ul>
+
+                <div class="sub-role">
+                    <h4>Software Engineer | C++, Python - Server and Deployments Team</h4>
+                    <span class="date">Jul 2021 - Feb 2023</span>
+                </div>
+                <ul>
+                    <li>Improved QA workflow by updating headless client system for Warzone 2.0 to spin up over 1000 test clients for large scale (150+ players) Call of Duty games.</li>
+                    <li>Integrated tools like AddressSanitzer and Clang Analyzer into linux server build pipeline to help identify bugs and vulnerabilities, and reduce build times.</li>
+                    <li>Improved server resource management by adding thread-watchdog functionality that monitors for dead threads and restarts faulty servers.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3><a href="https://microscape.xyz">Microscape</a></h3>
+                <p>Los Angeles, CA</p>
+                <div class="sub-role">
+                    <h4>Software Engineer | C#, Unity, Photon API, SteamVR, AWS SDK</h4>
+                    <span class="date">Nov 2020 - May 2021</span>
+                </div>
+                <ul>
+                    <li>Enabled multi user collaboration and voice communication using Photon Networking API.</li>
+                    <li>Integrated AWS for user authentication and internal file management using Cognito, DynamoDB, Lambda.</li>
+                    <li>Increased number of users by 50% by enabling cross platform (Oculus, Vive, etc.) support using Steam VR.</li>
+                    <li>Improved UI experience by separating menu functionality into individual action sets, reorganizing menu UI, and polishing laser pointer to display hit point and color identifiers for each player.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <h3>Ubisoft Entertainment</h3>
+                <p>Pune, India</p>
+                <div class="sub-role">
+                    <h4>Software Engineering Intern | C++, Python - Mobile games and Console development division</h4>
+                    <span class="date">Jun 2019 - Jul 2019</span>
+                </div>
+                <ul>
+                    <li>Worked on localization of a 2D mass multiplayer platformer with a player base of over 10 million.</li>
+                    <li>Eliminated 42% of redundant values by updating filtering algorithm used to populate Localization Database.</li>
+                    <li>Investigated bug causing FPS to drop from 60 to 11, using custom and PIX Profilers.</li>
+                    <li>Refactored 7% of the codebase to better support string replacement during Localization.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="job">
+                <h3>University of Southern California</h3>
+                <p>Los Angeles, CA</p>
+                <ul>
+                    <li>Master of Science, Computer Science (Aug 2019 - May 2021)</li>
+                    <li>Bachelor of Science, Computer Science (Aug 2017 - May 2020)</li>
+                </ul>
+            </div>
         </section>
 
         <section class="section">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>E-commerce Website</h3>
-                <p>A fully responsive e-commerce site built with React.js and Node.js, featuring user authentication and payment integration.</p>
+            <div class="job">
+                <h3><a href="https://github.com/microsoft/MixedRealityToolkit-Unity/pull/8428#event-3857402599">Open Source Microsoft-MixedRealityToolKit</a></h3>
+                <p class="date">Sep 2020 - Oct 2020</p>
+                <p>C#, Unity</p>
+                <ul>
+                    <li>Mixed Reality Toolkit is a framework for developing AR/VR apps on a variety of platforms. Repository has over 4000 stars on GitHub.</li>
+                    <li>Contributed a much-requested dynamic step slider that extends current UX controls.</li>
+                </ul>
             </div>
-            <div class="project">
-                <h3>Weather App</h3>
-                <p>A weather application that provides real-time weather data for any location, built using vanilla JavaScript and a weather API.</p>
-            </div>
-        </section>
 
-        <section class="section">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+            <div class="job">
+                <h3>Vector and Algorithmic Art Experiments</h3>
+                <p class="date">May 2020 - Present</p>
+                <p>Processing, P5.js</p>
+            </div>
         </section>
     </main>
 </body>
 </html>
-
